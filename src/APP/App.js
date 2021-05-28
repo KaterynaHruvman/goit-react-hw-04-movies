@@ -11,8 +11,8 @@ import styles from './App.module.scss';
 
 const Home = lazy(() => import('../viewes/Home/Home.jsx'));
 const Movies = lazy(() => import('../viewes/Movies/Movies.jsx'));
-const MovieDetails= lazy(() => import('../viewes/MovieDetails/MovieDetails.jsx'));
-const NotFound = lazy(() => import('../viewes/'));
+const MovieDetails= lazy(() => import('../viewes/MovieDetailsPage/MovieDetailsPage.jsx'));
+const NotFound = lazy(() => import('../viewes/NotFound/NotFound.jsx'));
 
 const App = () => {
   return (

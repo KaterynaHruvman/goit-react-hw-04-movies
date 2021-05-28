@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import { fetchMoviesTrend } from '../../servicesApi/movie-api';
+import { fetchMoviesTrend } from '../../servisecApi/movie-api';
 
 import Container from '../../components/Container/Container';
-import MoviesItemHomePage from '../../components/MoviesItemHomePage';
+import MoviesItem from '../../components/MoviesItem/MoviesItem';
 
 import styles from './Home.module.scss';
 
@@ -66,7 +66,7 @@ class Home extends Component {
                     pathname: `/movies/${movie.id}`,
                   }}
                 >
-                  <MoviesItemHomePage movie={movie} />
+                  <MoviesItem movie={movie} />
                 </Link>
               </li>
             );

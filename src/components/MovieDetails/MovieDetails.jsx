@@ -1,9 +1,9 @@
-import { BASE_IMAGE_URL } from '../../servicesApi/movie-api';
-import styles from '../../pages/MovieDetailsPage/stylesMovieDetailsPage.module.scss';
+import { BASE_IMAGE_URL } from '../../servisecApi/movie-api';
+import styles from '../../viewes/MovieDetails/MovieDetailsPage.module.scss';
 
 import PropTypes from 'prop-types';
 
-const MovieDetailsTemplate = ({ movie }) => {
+const MovieDetails = ({ movie }) => {
   const {
     id,
     poster_path,
@@ -40,7 +40,7 @@ const MovieDetailsTemplate = ({ movie }) => {
   );
 };
 
-MovieDetailsTemplate.propTypes = {
+MovieDetails.propTypes = {
   movie: PropTypes.shape({
     id: PropTypes.number,
     title: PropTypes.string.isRequired,
@@ -57,4 +57,4 @@ MovieDetailsTemplate.propTypes = {
   }),
 };
 
-export default MovieDetailsTemplate;
+export default MovieDetails;

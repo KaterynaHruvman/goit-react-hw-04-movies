@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import Searchbar from '../../components/Searchbar/SearchBar';
 import { fetchMoviesByQuery } from '../../servisecApi/movie-api';
-import MovieList from '../../components/MoviesList';
+import MovieList from '../../components/MoviestList/MoviesList';
 import Container from '../../components/Container/Container';
 import Button from '../../components/Button/Button';
 

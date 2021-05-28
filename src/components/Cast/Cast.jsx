@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { fetchMovieByCast } from '../../servisecApi/movie-api';
 
-import styles from './Cast.scss';
+import styles from './Cast.module.scss';
 class Cast extends Component {
   state = {
     cast: [],

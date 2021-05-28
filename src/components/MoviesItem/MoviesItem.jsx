@@ -1,5 +1,5 @@
-import styles from './stylesMoviesItem.module.scss';
-import { BASE_IMAGE_URL } from '../../servicesApi/movie-api';
+import styles from './MoviesItem.mpdule.scss';
+import { BASE_IMAGE_URL } from '../../servisecApi/movie-api';
 import PropTypes from 'prop-types';
 
 const MoviesItem = ({ movie }) => {
@@ -31,7 +31,7 @@ const MoviesItem = ({ movie }) => {
   );
 };
 
-MoviesItemHomePage.propTypes = {
+MoviesItem.propTypes = {
   movie: PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
