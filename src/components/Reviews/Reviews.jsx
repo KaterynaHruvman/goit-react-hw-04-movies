@@ -1,8 +1,8 @@
 import { Component } from 'react';
 
-import { fetchMovieByReviews } from '../../servisecApi/movie-api';
+import { fetchMovieByReviews } from '../../servicesApi/movie-api';
 
-import styles from './Reviews.modue.scss';
+import styles from './stylesReviews.module.scss';
 class Reviews extends Component {
   state = {
     reviews: [],

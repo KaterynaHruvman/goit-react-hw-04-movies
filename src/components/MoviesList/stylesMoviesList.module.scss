@@ -1,0 +1,26 @@
+.moviesList {
+  display: grid;
+  max-width: calc(100vw - 54px);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.moviesItem {
+  background-color: cornflowerblue;
+  color: cornsilk;
+  border-radius: 4px;
+  padding: 10px;
+
+  &:hover,
+  &:focus {
+    box-shadow: -3px 14px 38px 11px rgba(122, 233, 255, 0.77);
+    transform: translateY(-2%);
+  }
+}

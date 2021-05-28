@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import { fetchMovieByCast } from '../../servisecApi/movie-api';
+import { fetchMovieByCast } from '../../servicesApi/movie-api';
 
-import styles from './Cast.module.scss';
+import styles from './stylesCast.module.scss';
 class Cast extends Component {
   state = {
     cast: [],

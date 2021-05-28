@@ -1,0 +1,84 @@
+.infoTitle {
+  background-color: #bbb8eb;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.errorText {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 40px;
+}
+.btnGoBack {
+  display: block;
+  margin-left: auto;
+  padding: 10px 40px;
+  background-color: #ebebf1;
+  color: #945691;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 4px;
+  border: 2px solid hsl(0, 29%, 44%);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #8682da;
+  }
+}
+
+.movieContainer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.genres {
+  display: flex;
+}
+.genresItem:not(:last-child) {
+  margin-right: 10px;
+}
+
+.poster {
+  margin-right: 40px;
+  max-height: 400px;
+}
+
+.infoContainer {
+  text-align: start;
+}
+
+.extraInfoContainer {
+  padding-bottom: 20px;
+}
+.extraInfoTitle {
+  margin-top: 20px;
+}
+.extraInfo {
+  display: flex;
+  justify-content: space-around;
+}
+.extraInfoText {
+  font-size: 18px;
+}
+
+.navLink {
+  color: #010335;
+  font-size: 22px;
+  &:hover,
+  &:focus {
+    color: #b8b7c2;
+  }
+}
+.navLink__active {
+  color: #8682da;
+  text-decoration: underline 3px solid #5fb973;
+  &:hover,
+  &:focus {
+    color: #6163a8;
+  }
+}

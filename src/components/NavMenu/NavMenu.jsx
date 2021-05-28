@@ -1,35 +1,31 @@
-import { NavLink, Router } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-import Container from '../Container/Container';
+import Container from '../Container';
 
-import styles from './NavMenu.module.scss';
+import styles from './stylesNavMenu.module.scss';
 
 const NavMenu = () => (
   <Container>
     <ul className={styles.naviLinks}>
       <li>
-        <Router>
         <NavLink
           exact
           to="/"
           className={styles.navLink}
           activeClassName={styles.navLink__active}
         >
-            Home
+          Home
         </NavLink>
-          </Router>
       </li>
       <li>
-        <Router>
         <NavLink
           exact
           to="/movies"
           className={styles.navLink}
           activeClassName={styles.navLink__active}
         >
-            Movies
+          Movies
         </NavLink>
-            </Router>
       </li>
     </ul>
   </Container>
