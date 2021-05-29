@@ -1,12 +1,12 @@
 .moviesItem {
-  background-color: #aeaae7;
-  color: cornsilk;
+  background-color: #e897eb;
+  color: rgb(235, 220, 162);
   border-radius: 4px;
   padding: 10px;
 
   &:hover,
   &:focus {
-    box-shadow: -3px 14px 38px 11px rgba(122, 233, 255, 0.77);
+    box-shadow: -3px 14px 38px 11px rgba(255, 137, 122, 0.77);
     transform: translateY(-2%);
   }
 

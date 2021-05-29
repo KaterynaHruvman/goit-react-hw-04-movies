@@ -16,14 +16,7 @@ class HomePage extends Component {
   };
 
   componentDidMount() {
-    // const resTrends = fetchMoviesTrend()
-    //   .then(moviesTrendData => this.setState({ movies: moviesTrendData }))
-    //   .catch(err => {
-    //     console.log('error with fetching of HomePage');
-    //     console.error(err);
-    //     return this.setState({ err: true });
-    //   });
-    // console.log('resTrends: ', resTrends); // первый вариант
+    
     const resTrends = async () => {
       try {
         const moviesData = await fetchMoviesTrend();
@@ -35,7 +28,7 @@ class HomePage extends Component {
       }
     };
     resTrends();
-    // console.log(' fetchTrends(): ', fetchTrends()); // второй
+    
   }
   // async componentDidMount() {
   //   try {
@@ -55,7 +48,7 @@ class HomePage extends Component {
 
     return (
       <Container>
-        <h1 className={styles.homePageTitle}>movies trends by last week</h1>
+        <h1 className={styles.homePageTitle}>Movies trends by last week</h1>
 
         <ul className={styles.moviesList}>
           {movies.map(movie => {
