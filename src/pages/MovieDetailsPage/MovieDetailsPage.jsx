@@ -1,6 +1,6 @@
 import { Component, lazy, Suspense } from 'react';
 import { NavLink, Route, Switch } from 'react-router-dom';
-
+import routs from '../../routs'
 import { fetchMovieById } from '../../servicesApi/movie-api';
 
 import Container from '../../components/Container/';
@@ -38,20 +38,20 @@ class MovieDetailsPage extends Component {
         return this.setState({ err: true });
       });
 
-    // console.log('fetching Movie Details Info page...');
+     console.log('fetching Movie Details Info page...');
   }
 
   handleGoBack = () => {
     const { location, history } = this.props;
-    // if (location.state && location.state.from) {
-    //   return history.push(location.state.from);
-    // }
-    // history.push('/');
-    //=================================================
-    history.push(location?.state?.from || '/');
-    //=================================================
+if (location.state && location.state.from) {
+          return history.push(location.state.from);
+     }
+    history.push(routs.movies);
+    console.log(location.state.from)
+    // history.push(location?.state?.from || '/');
   };
 
+  
   render() {
     const { id, err } = this.state;
 
@@ -69,7 +69,7 @@ class MovieDetailsPage extends Component {
 
           {err ? (
             <h1 className={styles.errorText}>
-              OOOOPPPPSSSS THERE IS AN ERROR!!!!!!!!!!!!!!!!
+              OOOOPPPPSSSS!!!!!!!!!!!!!!!!
             </h1>
           ) : (
             <>

@@ -96,12 +96,12 @@ class MoviesPage extends Component {
           </Container>
         ) : (
           <Container>
-            <h1>here you can find more movies, just put the request</h1>
+            <h1>Here you can find more movies, put the request</h1>
           </Container>
         )}
 
         <Container>
-          {movies.length === 0 && searchQuery && <p>Smth went wrong</p>}
+          {movies.length === 0 && searchQuery && <p>Somthing went wrong</p>}
         </Container>
       </div>
     );

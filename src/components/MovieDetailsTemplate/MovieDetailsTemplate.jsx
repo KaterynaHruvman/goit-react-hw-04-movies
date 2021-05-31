@@ -46,7 +46,7 @@ MovieDetailsTemplate.propTypes = {
     title: PropTypes.string.isRequired,
     original_title: PropTypes.string.isRequired,
     vote_average: PropTypes.number.isRequired,
-    poster_path: PropTypes.string.isRequired,
+    // poster_path: PropTypes.string.isRequired,
     overview: PropTypes.string.isRequired,
     genres: PropTypes.arrayOf(
       PropTypes.shape({

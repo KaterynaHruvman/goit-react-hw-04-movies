@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import MoviesItemHomePage from '../MoviesItemHomePage';
 
 import styles from './stylesMoviesList.module.scss';
 
-const MoviesList = ({ movies }) => {
+const MoviesList = ({ movies, location }) => {
   return (
     <ul className={styles.moviesList}>
       {movies.map(movie => {
@@ -14,6 +14,7 @@ const MoviesList = ({ movies }) => {
             <Link
               to={{
                 pathname: `/movies/${movie.id}`,
+                 state: { from: location },
               }}
             >
               <MoviesItemHomePage movie={movie} />
@@ -29,4 +30,4 @@ MoviesList.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.object),
 };
 
-export default MoviesList;
+export default withRouter(MoviesList);
