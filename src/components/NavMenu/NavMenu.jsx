@@ -21,6 +21,7 @@ const NavMenu = () => (
         <NavLink
           exact
           to="/movies"
+          
           className={styles.navLink}
           activeClassName={styles.navLink__active}
         >

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import { fetchMoviesTrend } from '../../servicesApi/movie-api';
 
@@ -44,7 +44,7 @@ class HomePage extends Component {
   // } // третий
 
   render() {
-    const { movies } = this.state;
+    const { movies, location } = this.state;
 
     return (
       <Container>
@@ -57,6 +57,7 @@ class HomePage extends Component {
                 <Link
                   to={{
                     pathname: `/movies/${movie.id}`,
+                     state: { from: location },
                   }}
                 >
                   <MoviesItemHomePage movie={movie} />
@@ -70,4 +71,4 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+export default withRouter(HomePage);
