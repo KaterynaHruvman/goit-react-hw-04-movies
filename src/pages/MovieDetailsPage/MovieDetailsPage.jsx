@@ -1,5 +1,5 @@
 import { Component, lazy, Suspense } from 'react';
-import { NavLink, Route, Switch } from 'react-router-dom';
+import { NavLink, Route, Switch, withRouter } from 'react-router-dom';
 // import routs from '../../routs'
 import { fetchMovieById } from '../../servicesApi/movie-api';
 
@@ -42,14 +42,15 @@ class MovieDetailsPage extends Component {
   }
 
   handleGoBack = () => {
-   
     const { location, history } = this.props;
-    history.push(location?.state?.from || '/');
+     history.push(
+      location?.state?.from ||
+        location?.state?.from?.pathname ||
+        '/',
+     );
     console.log(history.location)
   };
-  
-
-  
+ 
   render() {
     const { id, err } = this.state;
 
@@ -122,4 +123,4 @@ class MovieDetailsPage extends Component {
   }
 }
 
-export default MovieDetailsPage;
+export default withRouter( MovieDetailsPage);

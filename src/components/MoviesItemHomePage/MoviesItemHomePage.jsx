@@ -37,7 +37,7 @@ MoviesItemHomePage.propTypes = {
     title: PropTypes.string.isRequired,
     original_title: PropTypes.string.isRequired,
     vote_average: PropTypes.number.isRequired,
-    poster_path: PropTypes.string.isRequired,
+    // poster_path: PropTypes.string.isRequired,
     release_date: PropTypes.string.isRequired,
   }),
 };
