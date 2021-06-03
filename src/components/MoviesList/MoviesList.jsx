@@ -14,7 +14,7 @@ const MoviesList = ({ movies, location }) => {
             <Link
               to={{
                 pathname: `/movies/${movie.id}`,
-                 state: location,
+                  state: { from: location },
               }}
             >
               <MoviesItemHomePage movie={movie} />
