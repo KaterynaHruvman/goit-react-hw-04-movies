@@ -54,10 +54,10 @@ class MoviesPage extends Component {
     const { searchQuery, currentPage } = this.state;
     this.setState({ isLoading: true });
 
-    if (searchQuery.length <= 2) {
-      this.setState({ isLoading: false });
-      return;
-    }
+    // if (searchQuery.length <= 3) {
+    //   this.setState({ isLoading: false });
+    //   return;
+    // }
 
     fetchMoviesByQuery(searchQuery, currentPage)
       .then(results => {
