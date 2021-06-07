@@ -11,10 +11,21 @@ class Searchbar extends Component {
     this.setState({ searchQuery: ev.currentTarget.value });
   };
 
-  handelSubmit = ev => {
+  handelSubmit = (ev) => {
     ev.preventDefault();
+    console.log(this.props);
+    this.props.history.push({
+      query: this.state.searchQuery,
+    });
     this.props.onSubmit(this.state.searchQuery);
-    this.setState({ searchQuery: '' });
+    this.setState({ searchQuery: "" });
+  };
+  componentDidMount = () => {
+    if (this.props.history.location.query) {
+      this.props.onSubmit(this.props.history.location.query);
+    } else {
+      return;
+    }
   };
 
   render() {

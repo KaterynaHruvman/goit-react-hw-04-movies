@@ -78,7 +78,7 @@ class MoviesPage extends Component {
 
     return (
       <div>
-        <Searchbar onSubmit={this.addMovies} />
+        <Searchbar history={this.props.history} onSubmit={this.addMovies} />
         {isLoading && (
           <Loader
             type="ThreeDots"
@@ -91,7 +91,8 @@ class MoviesPage extends Component {
 
         {movies.length > 0 && !err ? (
           <Container>
-            <MovieList movies={movies} />
+            <MovieList movies={movies}
+            />
             <Button onClick={this.fetchMovies} isLoading={isLoading} />
           </Container>
         ) : (
